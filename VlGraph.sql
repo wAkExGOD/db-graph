@@ -7,7 +7,7 @@ GO
 USE VlGraph
 GO
 
--- Таблицы узлов
+-- РўР°Р±Р»РёС†С‹ СѓР·Р»РѕРІ
 CREATE TABLE Students (
     ID INTEGER PRIMARY KEY,
     Name NVARCHAR(100),
@@ -29,51 +29,51 @@ CREATE TABLE Movies (
     YearReleased INTEGER
 ) AS NODE;
 
--- Таблицы рёбер
+-- РўР°Р±Р»РёС†С‹ СЂС‘Р±РµСЂ
 CREATE TABLE FriendsWith AS EDGE;
 CREATE TABLE RecommendsBook (Comment NVARCHAR(100)) AS EDGE;
 CREATE TABLE RecommendsMovie (Comment NVARCHAR(100)) AS EDGE;
 
 INSERT INTO Students VALUES
-(1, 'Иван Иванов', 20, 'БГУ'),
-(2, 'Мария Петрова', 21, 'БГУИР'),
-(3, 'Алексей Сидоров', 22, 'БНТУ'),
-(4, 'Екатерина Кузнецова', 20, 'БГУ'),
-(5, 'Дмитрий Смирнов', 23, 'БГМУ'),
-(6, 'Ольга Васнецова', 21, 'БГПУ'),
-(7, 'Сергей Козлов', 22, 'БГАТУ'),
-(8, 'Анна Лебедева', 20, 'БГУ'),
-(9, 'Павел Новиков', 21, 'БГУИР'),
-(10, 'Юлия Морозова', 22, 'БГЭУ');
+(1, 'РРІР°РЅ РРІР°РЅРѕРІ', 20, 'Р‘Р“РЈ'),
+(2, 'РњР°СЂРёСЏ РџРµС‚СЂРѕРІР°', 21, 'Р‘Р“РЈРР '),
+(3, 'РђР»РµРєСЃРµР№ РЎРёРґРѕСЂРѕРІ', 22, 'Р‘РќРўРЈ'),
+(4, 'Р•РєР°С‚РµСЂРёРЅР° РљСѓР·РЅРµС†РѕРІР°', 20, 'Р‘Р“РЈ'),
+(5, 'Р”РјРёС‚СЂРёР№ РЎРјРёСЂРЅРѕРІ', 23, 'Р‘Р“РњРЈ'),
+(6, 'РћР»СЊРіР° Р’Р°СЃРЅРµС†РѕРІР°', 21, 'Р‘Р“РџРЈ'),
+(7, 'РЎРµСЂРіРµР№ РљРѕР·Р»РѕРІ', 22, 'Р‘Р“РђРўРЈ'),
+(8, 'РђРЅРЅР° Р›РµР±РµРґРµРІР°', 20, 'Р‘Р“РЈ'),
+(9, 'РџР°РІРµР» РќРѕРІРёРєРѕРІ', 21, 'Р‘Р“РЈРР '),
+(10, 'Р®Р»РёСЏ РњРѕСЂРѕР·РѕРІР°', 22, 'Р‘Р“Р­РЈ');
 
 INSERT INTO Books VALUES
-(1, 'Война и мир', 'Лев Толстой', 1869),
-(2, 'Преступление и наказание', 'Фёдор Достоевский', 1866),
-(3, '1984', 'Джордж Оруэлл', 1949),
-(4, 'Улисс', 'Джеймс Джойс', 1922),
-(5, 'Лолита', 'Владимир Набоков', 1955),
-(6, 'Шум и ярость', 'Уильям Фолкнер', 1929),
-(7, 'Невидимка', 'Ральф Эллисон', 1952),
-(8, 'На маяк', 'Вирджиния Вулф', 1927),
-(9, 'Гордость и предубеждение', 'Джейн Остин', 1813),
-(10, 'Властелин колец', 'Дж. Р. Р. Толкин', 1954);
+(1, 'Р’РѕР№РЅР° Рё РјРёСЂ', 'Р›РµРІ РўРѕР»СЃС‚РѕР№', 1869),
+(2, 'РџСЂРµСЃС‚СѓРїР»РµРЅРёРµ Рё РЅР°РєР°Р·Р°РЅРёРµ', 'Р¤С‘РґРѕСЂ Р”РѕСЃС‚РѕРµРІСЃРєРёР№', 1866),
+(3, '1984', 'Р”Р¶РѕСЂРґР¶ РћСЂСѓСЌР»Р»', 1949),
+(4, 'РЈР»РёСЃСЃ', 'Р”Р¶РµР№РјСЃ Р”Р¶РѕР№СЃ', 1922),
+(5, 'Р›РѕР»РёС‚Р°', 'Р’Р»Р°РґРёРјРёСЂ РќР°Р±РѕРєРѕРІ', 1955),
+(6, 'РЁСѓРј Рё СЏСЂРѕСЃС‚СЊ', 'РЈРёР»СЊСЏРј Р¤РѕР»РєРЅРµСЂ', 1929),
+(7, 'РќРµРІРёРґРёРјРєР°', 'Р Р°Р»СЊС„ Р­Р»Р»РёСЃРѕРЅ', 1952),
+(8, 'РќР° РјР°СЏРє', 'Р’РёСЂРґР¶РёРЅРёСЏ Р’СѓР»С„', 1927),
+(9, 'Р“РѕСЂРґРѕСЃС‚СЊ Рё РїСЂРµРґСѓР±РµР¶РґРµРЅРёРµ', 'Р”Р¶РµР№РЅ РћСЃС‚РёРЅ', 1813),
+(10, 'Р’Р»Р°СЃС‚РµР»РёРЅ РєРѕР»РµС†', 'Р”Р¶. Р . Р . РўРѕР»РєРёРЅ', 1954);
 
 INSERT INTO Movies VALUES
-(1, 'Крёстный отец', 'Фрэнсис Форд Коппола', 1972),
-(2, 'Криминальное чтиво', 'Квентин Тарантино', 1994),
-(3, 'Тёмный рыцарь', 'Кристофер Нолан', 2008),
-(4, 'Космическая одиссея 2001', 'Стэнли Кубрик', 1968),
-(5, 'Красота по-американски', 'Сэм Мендес', 1999),
-(6, 'Матрица', 'Лана и Лилли Вачовски', 1999),
-(7, 'Список Шиндлера', 'Стивен Спилберг', 1993),
-(8, 'Побег из Шоушенка', 'Фрэнк Дарабонт', 1994),
-(9, 'Форрест Гамп', 'Роберт Земекис', 1994),
-(10, 'Начало', 'Кристофер Нолан', 2010);
+(1, 'РљСЂС‘СЃС‚РЅС‹Р№ РѕС‚РµС†', 'Р¤СЂСЌРЅСЃРёСЃ Р¤РѕСЂРґ РљРѕРїРїРѕР»Р°', 1972),
+(2, 'РљСЂРёРјРёРЅР°Р»СЊРЅРѕРµ С‡С‚РёРІРѕ', 'РљРІРµРЅС‚РёРЅ РўР°СЂР°РЅС‚РёРЅРѕ', 1994),
+(3, 'РўС‘РјРЅС‹Р№ СЂС‹С†Р°СЂСЊ', 'РљСЂРёСЃС‚РѕС„РµСЂ РќРѕР»Р°РЅ', 2008),
+(4, 'РљРѕСЃРјРёС‡РµСЃРєР°СЏ РѕРґРёСЃСЃРµСЏ 2001', 'РЎС‚СЌРЅР»Рё РљСѓР±СЂРёРє', 1968),
+(5, 'РљСЂР°СЃРѕС‚Р° РїРѕ-Р°РјРµСЂРёРєР°РЅСЃРєРё', 'РЎСЌРј РњРµРЅРґРµСЃ', 1999),
+(6, 'РњР°С‚СЂРёС†Р°', 'Р›Р°РЅР° Рё Р›РёР»Р»Рё Р’Р°С‡РѕРІСЃРєРё', 1999),
+(7, 'РЎРїРёСЃРѕРє РЁРёРЅРґР»РµСЂР°', 'РЎС‚РёРІРµРЅ РЎРїРёР»Р±РµСЂРі', 1993),
+(8, 'РџРѕР±РµРі РёР· РЁРѕСѓС€РµРЅРєР°', 'Р¤СЂСЌРЅРє Р”Р°СЂР°Р±РѕРЅС‚', 1994),
+(9, 'Р¤РѕСЂСЂРµСЃС‚ Р“Р°РјРї', 'Р РѕР±РµСЂС‚ Р—РµРјРµРєРёСЃ', 1994),
+(10, 'РќР°С‡Р°Р»Рѕ', 'РљСЂРёСЃС‚РѕС„РµСЂ РќРѕР»Р°РЅ', 2010);
 
--- Дружеские связи между студентами
+-- Р”СЂСѓР¶РµСЃРєРёРµ СЃРІСЏР·Рё РјРµР¶РґСѓ СЃС‚СѓРґРµРЅС‚Р°РјРё
 INSERT INTO FriendsWith ($from_id, $to_id)
 VALUES
--- Иван (1) дружит с Марией (2), Алексеем (3) и Екатериной (4)
+-- РРІР°РЅ (1) РґСЂСѓР¶РёС‚ СЃ РњР°СЂРёРµР№ (2), РђР»РµРєСЃРµРµРј (3) Рё Р•РєР°С‚РµСЂРёРЅРѕР№ (4)
 ((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Students WHERE ID = 2)),
 ((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Students WHERE ID = 1)),
 ((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Students WHERE ID = 3)),
@@ -81,108 +81,108 @@ VALUES
 ((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Students WHERE ID = 4)),
 ((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Students WHERE ID = 1)),
 
--- Мария (2) дружит с Дмитрием (5) и Ольгой (6)
+-- РњР°СЂРёСЏ (2) РґСЂСѓР¶РёС‚ СЃ Р”РјРёС‚СЂРёРµРј (5) Рё РћР»СЊРіРѕР№ (6)
 ((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Students WHERE ID = 5)),
 ((SELECT $node_id FROM Students WHERE ID = 5), (SELECT $node_id FROM Students WHERE ID = 2)),
 ((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Students WHERE ID = 6)),
 ((SELECT $node_id FROM Students WHERE ID = 6), (SELECT $node_id FROM Students WHERE ID = 2)),
 
--- Алексей (3) дружит с Сергеем (7) и Анной (8)
+-- РђР»РµРєСЃРµР№ (3) РґСЂСѓР¶РёС‚ СЃ РЎРµСЂРіРµРµРј (7) Рё РђРЅРЅРѕР№ (8)
 ((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Students WHERE ID = 7)),
 ((SELECT $node_id FROM Students WHERE ID = 7), (SELECT $node_id FROM Students WHERE ID = 3)),
 ((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Students WHERE ID = 8)),
 ((SELECT $node_id FROM Students WHERE ID = 8), (SELECT $node_id FROM Students WHERE ID = 3)),
 
--- Екатерина (4) дружит с Павлом (9) и Юлией (10)
+-- Р•РєР°С‚РµСЂРёРЅР° (4) РґСЂСѓР¶РёС‚ СЃ РџР°РІР»РѕРј (9) Рё Р®Р»РёРµР№ (10)
 ((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Students WHERE ID = 9)),
 ((SELECT $node_id FROM Students WHERE ID = 9), (SELECT $node_id FROM Students WHERE ID = 4)),
 ((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Students WHERE ID = 10)),
 ((SELECT $node_id FROM Students WHERE ID = 10), (SELECT $node_id FROM Students WHERE ID = 4));
 
--- Рекомендации книг
+-- Р РµРєРѕРјРµРЅРґР°С†РёРё РєРЅРёРі
 INSERT INTO RecommendsBook ($from_id, $to_id, Comment)
 VALUES
--- Иван (1) рекомендует книги
-((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Books WHERE ID = 3), 'Классика антиутопии, должен прочитать каждый'),
-((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Books WHERE ID = 10), 'Лучшее фэнтези всех времён'),
+-- РРІР°РЅ (1) СЂРµРєРѕРјРµРЅРґСѓРµС‚ РєРЅРёРіРё
+((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Books WHERE ID = 3), 'РљР»Р°СЃСЃРёРєР° Р°РЅС‚РёСѓС‚РѕРїРёРё, РґРѕР»Р¶РµРЅ РїСЂРѕС‡РёС‚Р°С‚СЊ РєР°Р¶РґС‹Р№'),
+((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Books WHERE ID = 10), 'Р›СѓС‡С€РµРµ С„СЌРЅС‚РµР·Рё РІСЃРµС… РІСЂРµРјС‘РЅ'),
 
--- Мария (2) рекомендует книги
-((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Books WHERE ID = 2), 'Глубокий психологический роман'),
-((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Books WHERE ID = 9), 'Идеальное сочетание юмора и романтики'),
+-- РњР°СЂРёСЏ (2) СЂРµРєРѕРјРµРЅРґСѓРµС‚ РєРЅРёРіРё
+((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Books WHERE ID = 2), 'Р“Р»СѓР±РѕРєРёР№ РїСЃРёС…РѕР»РѕРіРёС‡РµСЃРєРёР№ СЂРѕРјР°РЅ'),
+((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Books WHERE ID = 9), 'РРґРµР°Р»СЊРЅРѕРµ СЃРѕС‡РµС‚Р°РЅРёРµ СЋРјРѕСЂР° Рё СЂРѕРјР°РЅС‚РёРєРё'),
 
--- Алексей (3) рекомендует книги
-((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Books WHERE ID = 1), 'Эпичное произведение, хотя и длинное'),
-((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Books WHERE ID = 4), 'Сложно, но стоит усилий'),
+-- РђР»РµРєСЃРµР№ (3) СЂРµРєРѕРјРµРЅРґСѓРµС‚ РєРЅРёРіРё
+((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Books WHERE ID = 1), 'Р­РїРёС‡РЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ, С…РѕС‚СЏ Рё РґР»РёРЅРЅРѕРµ'),
+((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Books WHERE ID = 4), 'РЎР»РѕР¶РЅРѕ, РЅРѕ СЃС‚РѕРёС‚ СѓСЃРёР»РёР№'),
 
--- Екатерина (4) рекомендует книги
-((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Books WHERE ID = 5), 'Спорный, но гениальный роман'),
-((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Books WHERE ID = 7), 'Важно для понимания расовых вопросов'),
+-- Р•РєР°С‚РµСЂРёРЅР° (4) СЂРµРєРѕРјРµРЅРґСѓРµС‚ РєРЅРёРіРё
+((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Books WHERE ID = 5), 'РЎРїРѕСЂРЅС‹Р№, РЅРѕ РіРµРЅРёР°Р»СЊРЅС‹Р№ СЂРѕРјР°РЅ'),
+((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Books WHERE ID = 7), 'Р’Р°Р¶РЅРѕ РґР»СЏ РїРѕРЅРёРјР°РЅРёСЏ СЂР°СЃРѕРІС‹С… РІРѕРїСЂРѕСЃРѕРІ'),
 
--- Дмитрий (5) рекомендует книги
-((SELECT $node_id FROM Students WHERE ID = 5), (SELECT $node_id FROM Books WHERE ID = 6), 'Экспериментальный стиль, но очень мощно'),
-((SELECT $node_id FROM Students WHERE ID = 5), (SELECT $node_id FROM Books WHERE ID = 8), 'Потрясающий поток сознания');
+-- Р”РјРёС‚СЂРёР№ (5) СЂРµРєРѕРјРµРЅРґСѓРµС‚ РєРЅРёРіРё
+((SELECT $node_id FROM Students WHERE ID = 5), (SELECT $node_id FROM Books WHERE ID = 6), 'Р­РєСЃРїРµСЂРёРјРµРЅС‚Р°Р»СЊРЅС‹Р№ СЃС‚РёР»СЊ, РЅРѕ РѕС‡РµРЅСЊ РјРѕС‰РЅРѕ'),
+((SELECT $node_id FROM Students WHERE ID = 5), (SELECT $node_id FROM Books WHERE ID = 8), 'РџРѕС‚СЂСЏСЃР°СЋС‰РёР№ РїРѕС‚РѕРє СЃРѕР·РЅР°РЅРёСЏ');
 
--- Рекомендации фильмов
+-- Р РµРєРѕРјРµРЅРґР°С†РёРё С„РёР»СЊРјРѕРІ
 INSERT INTO RecommendsMovie ($from_id, $to_id, Comment)
 VALUES
--- Иван (1) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Movies WHERE ID = 3), 'Лучший фильм про Бэтмена'),
-((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Movies WHERE ID = 10), 'Умный и зрелищный фильм'),
+-- РРІР°РЅ (1) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Movies WHERE ID = 3), 'Р›СѓС‡С€РёР№ С„РёР»СЊРј РїСЂРѕ Р‘СЌС‚РјРµРЅР°'),
+((SELECT $node_id FROM Students WHERE ID = 1), (SELECT $node_id FROM Movies WHERE ID = 10), 'РЈРјРЅС‹Р№ Рё Р·СЂРµР»РёС‰РЅС‹Р№ С„РёР»СЊРј'),
 
--- Мария (2) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Movies WHERE ID = 2), 'Культовое кино, уникальный стиль'),
-((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Movies WHERE ID = 6), 'Философия и экшен в одном флаконе'),
+-- РњР°СЂРёСЏ (2) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Movies WHERE ID = 2), 'РљСѓР»СЊС‚РѕРІРѕРµ РєРёРЅРѕ, СѓРЅРёРєР°Р»СЊРЅС‹Р№ СЃС‚РёР»СЊ'),
+((SELECT $node_id FROM Students WHERE ID = 2), (SELECT $node_id FROM Movies WHERE ID = 6), 'Р¤РёР»РѕСЃРѕС„РёСЏ Рё СЌРєС€РµРЅ РІ РѕРґРЅРѕРј С„Р»Р°РєРѕРЅРµ'),
 
--- Алексей (3) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Movies WHERE ID = 1), 'Абсолютный шедевр кинематографа'),
-((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Movies WHERE ID = 4), 'Научная фантастика высшего уровня'),
+-- РђР»РµРєСЃРµР№ (3) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Movies WHERE ID = 1), 'РђР±СЃРѕР»СЋС‚РЅС‹Р№ С€РµРґРµРІСЂ РєРёРЅРµРјР°С‚РѕРіСЂР°С„Р°'),
+((SELECT $node_id FROM Students WHERE ID = 3), (SELECT $node_id FROM Movies WHERE ID = 4), 'РќР°СѓС‡РЅР°СЏ С„Р°РЅС‚Р°СЃС‚РёРєР° РІС‹СЃС€РµРіРѕ СѓСЂРѕРІРЅСЏ'),
 
--- Екатерина (4) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Movies WHERE ID = 5), 'Красивая и грустная история'),
-((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Movies WHERE ID = 7), 'Важный исторический фильм'),
+-- Р•РєР°С‚РµСЂРёРЅР° (4) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Movies WHERE ID = 5), 'РљСЂР°СЃРёРІР°СЏ Рё РіСЂСѓСЃС‚РЅР°СЏ РёСЃС‚РѕСЂРёСЏ'),
+((SELECT $node_id FROM Students WHERE ID = 4), (SELECT $node_id FROM Movies WHERE ID = 7), 'Р’Р°Р¶РЅС‹Р№ РёСЃС‚РѕСЂРёС‡РµСЃРєРёР№ С„РёР»СЊРј'),
 
--- Ольга (6) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 6), (SELECT $node_id FROM Movies WHERE ID = 8), 'Вдохновляющая история о надежде'),
-((SELECT $node_id FROM Students WHERE ID = 6), (SELECT $node_id FROM Movies WHERE ID = 9), 'Трогательно и смешно одновременно'),
+-- РћР»СЊРіР° (6) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 6), (SELECT $node_id FROM Movies WHERE ID = 8), 'Р’РґРѕС…РЅРѕРІР»СЏСЋС‰Р°СЏ РёСЃС‚РѕСЂРёСЏ Рѕ РЅР°РґРµР¶РґРµ'),
+((SELECT $node_id FROM Students WHERE ID = 6), (SELECT $node_id FROM Movies WHERE ID = 9), 'РўСЂРѕРіР°С‚РµР»СЊРЅРѕ Рё СЃРјРµС€РЅРѕ РѕРґРЅРѕРІСЂРµРјРµРЅРЅРѕ'),
 
--- Павел (9) рекомендует фильмы
-((SELECT $node_id FROM Students WHERE ID = 9), (SELECT $node_id FROM Movies WHERE ID = 3), 'Отличный супергеройский фильм'),
-((SELECT $node_id FROM Students WHERE ID = 9), (SELECT $node_id FROM Movies WHERE ID = 10), 'Запутанно, но очень интересно');
+-- РџР°РІРµР» (9) СЂРµРєРѕРјРµРЅРґСѓРµС‚ С„РёР»СЊРјС‹
+((SELECT $node_id FROM Students WHERE ID = 9), (SELECT $node_id FROM Movies WHERE ID = 3), 'РћС‚Р»РёС‡РЅС‹Р№ СЃСѓРїРµСЂРіРµСЂРѕР№СЃРєРёР№ С„РёР»СЊРј'),
+((SELECT $node_id FROM Students WHERE ID = 9), (SELECT $node_id FROM Movies WHERE ID = 10), 'Р—Р°РїСѓС‚Р°РЅРЅРѕ, РЅРѕ РѕС‡РµРЅСЊ РёРЅС‚РµСЂРµСЃРЅРѕ');
 
--- MATCH запросы
--- 1. Найти всех друзей Ивана
+-- MATCH Р·Р°РїСЂРѕСЃС‹
+-- 1. РќР°Р№С‚Рё РІСЃРµС… РґСЂСѓР·РµР№ РРІР°РЅР°
 SELECT s2.Name 
 FROM Students s1, FriendsWith f, Students s2
 WHERE MATCH(s1-(f)->s2)
-AND s1.Name = 'Иван Иванов';
+AND s1.Name = 'РРІР°РЅ РРІР°РЅРѕРІ';
 
--- 2. Найти книги, рекомендованные друзьями Марии
+-- 2. РќР°Р№С‚Рё РєРЅРёРіРё, СЂРµРєРѕРјРµРЅРґРѕРІР°РЅРЅС‹Рµ РґСЂСѓР·СЊСЏРјРё РњР°СЂРёРё
 SELECT b.Title, b.Author
 FROM Students s1, FriendsWith f, Students s2, RecommendsBook rb, Books b
 WHERE MATCH(s1-(f)->s2-(rb)->b)
-AND s1.Name = 'Мария Петрова';
+AND s1.Name = 'РњР°СЂРёСЏ РџРµС‚СЂРѕРІР°';
 
--- 3. Найти фильмы, рекомендованные студентами БГУ
+-- 3. РќР°Р№С‚Рё С„РёР»СЊРјС‹, СЂРµРєРѕРјРµРЅРґРѕРІР°РЅРЅС‹Рµ СЃС‚СѓРґРµРЅС‚Р°РјРё Р‘Р“РЈ
 SELECT m.Title, m.Director
 FROM Students s, RecommendsMovie rm, Movies m
 WHERE MATCH(s-(rm)->m)
-AND s.University = 'БГУ';
+AND s.University = 'Р‘Р“РЈ';
 
--- 4. Найти студентов, которые рекомендуют книги, опубликованные после 1950
+-- 4. РќР°Р№С‚Рё СЃС‚СѓРґРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ СЂРµРєРѕРјРµРЅРґСѓСЋС‚ РєРЅРёРіРё, РѕРїСѓР±Р»РёРєРѕРІР°РЅРЅС‹Рµ РїРѕСЃР»Рµ 1950
 SELECT DISTINCT s.Name
 FROM Students s, RecommendsBook rb, Books b
 WHERE MATCH(s-(rb)->b)
 AND b.YearPublished > 1950;
 
--- 5. Найти друзей друзей Алексея
+-- 5. РќР°Р№С‚Рё РґСЂСѓР·РµР№ РґСЂСѓР·РµР№ РђР»РµРєСЃРµСЏ
 SELECT s3.Name
 FROM Students s1, FriendsWith f1, Students s2, FriendsWith f2, Students s3
 WHERE MATCH(s1-(f1)->s2-(f2)->s3)
-AND s1.Name = 'Алексей Сидоров'
-AND s3.Name != 'Алексей Сидоров';
+AND s1.Name = 'РђР»РµРєСЃРµР№ РЎРёРґРѕСЂРѕРІ'
+AND s3.Name != 'РђР»РµРєСЃРµР№ РЎРёРґРѕСЂРѕРІ';
 
--- SHORTEST PATH запросы
--- 1. Найти кратчайший путь между Иваном и другими студентами
+-- SHORTEST PATH Р·Р°РїСЂРѕСЃС‹
+-- 1. РќР°Р№С‚Рё РєСЂР°С‚С‡Р°Р№С€РёР№ РїСѓС‚СЊ РјРµР¶РґСѓ РРІР°РЅРѕРј Рё РґСЂСѓРіРёРјРё СЃС‚СѓРґРµРЅС‚Р°РјРё
 SELECT 
     Student1.Name AS StudentName,
     STRING_AGG(Student2.Name, ' -> ') WITHIN GROUP (GRAPH PATH) AS FriendsPath
@@ -192,9 +192,9 @@ FROM
     Students FOR PATH AS Student2
 WHERE 
     MATCH(SHORTEST_PATH(Student1(-(fw)->Student2)+))
-    AND Student1.Name = 'Иван Иванов';
+    AND Student1.Name = 'РРІР°РЅ РРІР°РЅРѕРІ';
 
--- 2. Найти друзей и друзей друзей Марии Петровой 
+-- 2. РќР°Р№С‚Рё РґСЂСѓР·РµР№ Рё РґСЂСѓР·РµР№ РґСЂСѓР·РµР№ РњР°СЂРёРё РџРµС‚СЂРѕРІРѕР№ 
 SELECT
     s1.Name AS Student,
     STRING_AGG(s2.Name, ' -> ') WITHIN GROUP (GRAPH PATH) AS Path
@@ -204,9 +204,9 @@ FROM
     FriendsWith FOR PATH AS fw
 WHERE
     MATCH(SHORTEST_PATH(s1(-(fw)->s2){1,2}))
-    AND s1.Name = 'Мария Петрова';
+    AND s1.Name = 'РњР°СЂРёСЏ РџРµС‚СЂРѕРІР°';
 
--- для Power Bi
+-- РґР»СЏ Power Bi
 SELECT S1.ID AS IdFirst
 	, S1.name AS First
 	, CONCAT(N'user (', S1.id, ')') AS [First image name]
